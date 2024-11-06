@@ -1,0 +1,187 @@
+/* Estilos para o corpo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: #333;
+  }
+  
+  /* Estilo para o container */
+  .container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  /* Estilo do título */
+  .container h1 {
+    font-size: 55px;
+    color: #4e54c8;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo da mensagem */
+  .container p {
+    font-size: 40px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para o rodapé */
+  footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 12px;
+    color: #eee;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Estilos responsivos para smartphones */
+  @media (max-width: 600px) {
+    body {
+      padding: 0;
+      font-size: 40px;
+    }
+  
+    .container {
+      padding: 5px;
+      width: 30%;
+      
+    }
+  
+    .container h1 {
+      font-size: 15px;
+    }
+  
+    .container p {
+      font-size: 30px;
+    }
+  
+    footer {
+      font-size: 15px;
+      padding-bottom: 10px;
+    }
+  }
+
+/* Navbar Horizontal */
+.navbar {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333;
+  padding: 5px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Para aparecer acima da sidebar */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #4e54c8;
+  border-radius: 4px;
+}
+/* Botão de abrir a barra lateral */
+@media (min-width: 601px) {
+  .navbar {
+    display: flex; /* Exibe a navbar para telas maiores */
+  }
+}
+  /* Estilo da barra lateral */
+  .sidebar {
+    height: 100%;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: -250px; /* Oculta a barra fora da tela */
+    background-color: #333;
+    color: white;
+    transition: 0.3s; /* Animação suave para abrir e fechar */
+    padding-top: 20px;
+    overflow-y: auto;
+    z-index: 1;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .sidebar h3{
+    
+    padding-left: 15px;
+
+  }
+  #abrir-btn {
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    position: absolute;
+    cursor:auto;
+    margin-right: 80%;
+  margin-bottom: 180%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 0;
+  }
+  .imagem{
+    position: absolute;
+    bottom: 10px;
+    font-size: 12px;
+
+    color: #eee;
+    margin-left: 80%;
+    width: 100px;
+    height: auto;
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+    box-sizing: border-box; /* Mantém a proporção da imagem */
+  }
+
+  /* Botão de fechar dentro da barra */
+  .fechar-btn {
+    font-size: 30px;
+    margin-top: 14%;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 24px;
+  }
+  
+  /* Estilo dos links de navegação */
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 20px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 8px 20px;
+    transition: background 0.3s;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #4e54c8;
+  }
+  

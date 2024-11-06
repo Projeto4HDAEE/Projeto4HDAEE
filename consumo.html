@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Projeto Microprocessados PIC16f877A</title>
+        <!-- Link para o arquivo CSS -->
+        <link rel="stylesheet" href="Style.css" />
+        <!-- Script Firebase compatível -->
+        <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-compat.js"></script>
+    </head>
+<body>
+    <div id="sidebar" class="sidebar">
+        <button class="fechar-btn" onclick="fecharMenu()">×</button>
+        <h3>Menu</h2>
+        <ul>
+          <li>
+            <a
+              href="index.html"
+              target="_blank"
+              >Corrente
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/guilherme-roque-almeida"
+              target="_blank"
+              >Guilherme Roque</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/jo%C3%A3o-vitor-dos-santos-padilha-968985237/"
+              target="_blank"
+              >João Padilha</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/HalversonH/microsite" target="_blank"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+  
+      <div class="container">
+        <h1>Consumo em watts do 2º ANDAR</h1>
+        <p id="mensagem">Carregando dados...</p>
+      </div>
+  
+      <footer>Desenvolvido por Guilherme Roque</footer>
+  
+      <script>
+        // Configurações do Firebase (substitua com suas próprias configurações)
+        const firebaseConfig = {
+          apiKey: "AIzaSyCoCJK3h9KH4gEJcvbaodTXl2QY1CBWj2w",
+          authDomain: "1:879523044074:android:cd82a8bedb6a89cc125593",
+          databaseURL: "https://terrometro-default-rtdb.firebaseio.com",
+          projectId: "879523044074",
+          storageBucket: "terrometro.firebasestorage.app",
+          messagingSenderId: "SEU_MESSAGING_SENDER_ID",
+          appId: "com.example.terrometro",
+        };
+  
+        // Inicializa o Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+  
+        // Função para buscar dados do Firebase
+        function buscarDados() {
+          const ref = database.ref("Medidas/iteracao"); // Somente o caminho relativo
+          ref.on("value", (snapshot) => {
+            const data = snapshot.val();
+            const valorFormatado =
+              typeof data === "number" ? data.toFixed(2) : data; // Limita a 2 casas decimais se for número
+            document.getElementById("mensagem").innerText = valorFormatado
+              ? valorFormatado + "W"
+              : "Sem dados disponíveis";
+          });
+        }
+        function abrirMenu() {
+          document.getElementById("sidebar").style.left = "0";
+        }
+  
+        // Função para fechar a barra lateral
+        function fecharMenu() {
+          document.getElementById("sidebar").style.left = "-250px";
+        }
+        // Chama a função buscarDados
+        buscarDados();
+      </script>
+      <button id="abrir-btn" onclick="abrirMenu()">☰ Menu</button>
+  
+    <img class="imagem"src="img/Logo_UNIR_Horizontal_01.png" alt="LOGO UNIR" >
+  
+  </div>
+      <!-- Barra lateral -->
+    </body>
+    </html>

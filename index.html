@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Microprocessados PIC16f877A</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="Style.css" />
+    <!-- Script Firebase framework -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-compat.js"></script>
+  </head>
+  <body>
+        <!-- barra horizontal de navegação desktop -->
+    <div class="navbar">
+      <h3>Menu</h2>
+        <a
+        href="https://www.linkedin.com/in/guilherme-roque-almeida"
+        target="_blank"
+        >Guilherme Roque</a
+      >
+      <a
+      href="https://www.linkedin.com/in/ana-assuncao-0a9aa180/"
+      target="_blank"
+      >Ana Assunção</a
+    >
+          <a
+            href="consumo.html"
+            target="_blank"
+            >Consumo
+          </a>
+    
+    
+       
+          <a
+            href="https://www.linkedin.com/in/jo%C3%A3o-vitor-dos-santos-padilha-968985237/"
+            target="_blank"
+            >João Padilha</a
+          >
+        
+          <a href="https://github.com/HalversonH/microsite" target="_blank"
+            >GitHub</a
+          >
+      
+    </div>
+     <!-- barra vertical de navegação Smartphone -->
+    <div id="sidebar" class="sidebar">
+      <button class="fechar-btn" onclick="fecharMenu()">×</button>
+      <h3>Menu</h2>
+      <ul>
+        <li>
+          <a
+            href="consumo.html"
+            target="_blank"
+            >Consumo
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/guilherme-roque-almeida"
+            target="_blank"
+            >Guilherme Roque</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/jo%C3%A3o-vitor-dos-santos-padilha-968985237/"
+            target="_blank"
+            >João Padilha</a
+          >
+        </li><li>
+        <a
+        href="https://www.linkedin.com/in/ana-assuncao-0a9aa180/"
+        target="_blank"
+        >Ana Assunção</a
+      > </li>
+        <li>
+          <a href="https://github.com/HalversonH/microsite" target="_blank"
+            >GitHub</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <h1>Fase A</h1>
+      <p id="mensagemA">Carregando dados...</p>
+    </div>
+    <div class="container">
+      <h1>Fase B</h1>
+      <p id="mensagemB">Carregando dados...</p>
+    </div>
+    <div class="container">
+      <h1>Fase C</h1>
+      <p id="mensagemC">Carregando dados...</p>
+    </div>
+    <footer>Desenvolvido por Guilherme Roque</footer>
+
+    <script>
+      // Configurações do Firebase (substitua com suas próprias configurações)
+      const firebaseConfig = {
+        apiKey: "AIzaSyCoCJK3h9KH4gEJcvbaodTXl2QY1CBWj2w",
+        authDomain: "1:879523044074:android:cd82a8bedb6a89cc125593",
+        databaseURL: "https://terrometro-default-rtdb.firebaseio.com",
+        projectId: "879523044074",
+        storageBucket: "terrometro.firebasestorage.app",
+        appId: "com.example.terrometro",
+      };
+
+      // Inicializa o Firebase
+      firebase.initializeApp(firebaseConfig);
+      const database = firebase.database();
+
+      function buscarDadosFaseA() {
+  const ref = database.ref("Medidas/Corrente");
+  ref.on("value", (snapshot) => {
+    const data = snapshot.val();
+    console.log("Dados Fase A:", data); // Log para verificar os dados
+    const valorFormatado = typeof data === "number" ? data.toFixed(2) : data;
+    document.getElementById("mensagemA").innerText = valorFormatado
+      ? valorFormatado + "A"
+      : "Sem dados disponíveis";
+  });
+}
+
+function buscarDadosFaseB() {
+  const ref = database.ref("Medidas/Corrente1");
+  ref.on("value", (snapshot) => {
+    const data = snapshot.val();
+    console.log("Dados Fase B:", data); // Log para verificar os dados
+    const valorFormatado = typeof data === "number" ? data.toFixed(2) : data;
+    document.getElementById("mensagemB").innerText = valorFormatado
+      ? valorFormatado + "A"
+      : "Sem dados disponíveis";
+  });
+}
+
+function buscarDadosFaseC() {
+  const ref = database.ref("Medidas/Corrente2");
+  ref.on("value", (snapshot) => {
+    const data = snapshot.val();
+    console.log("Dados Fase C:", data); // Log para verificar os dados
+    const valorFormatado = typeof data === "number" ? data.toFixed(2) : data;
+    document.getElementById("mensagemC").innerText = valorFormatado
+      ? valorFormatado + "A"
+      : "Sem dados disponíveis";
+  });
+}
+
+      function abrirMenu() {
+        document.getElementById("sidebar").style.left = "0";
+      }
+
+      // Função para fechar a barra lateral
+      function fecharMenu() {
+        document.getElementById("sidebar").style.left = "-250px";
+      }
+      // Chama a função buscarDados
+      buscarDadosFaseA();
+ 
+      buscarDadosFaseB();
+
+      buscarDadosFaseC();
+    </script>
+    <button id="abrir-btn" onclick="abrirMenu()">☰ Menu</button>
+
+  <img class="imagem"src="img/Logo_UNIR_Horizontal_01.png" alt="LOGO UNIR" >
+
+</div>
+    <!-- Barra lateral -->
+  </body>
+</html>
