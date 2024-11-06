@@ -5,14 +5,14 @@ Este repositório contém o projeto de medição de consumo de energia do segund
 Ele foi desenvolvido como método avaliativo para a disciplina de Microprocessados.
 ## Sobre o Projeto
 
-- **Alunos**: Guilherme Roque Almeida de Sousa; João Vitor dos Santos Padilha.
+- **Alunos**: 
 - **Curso**: Engenharia Elétrica
 - **Disciplina**: Microprocessados
 - **Professor**: Dr. Prof. Ciro José Egoavil Montero
 
 ### Objetivo
 
-O objetivo deste projeto é desenvolver uma solução que permita monitorar e analisar o consumo de energia elétrica em tempo real no segundo andar do prédio 4H do DAEE. 
+O objetivo deste projeto é desenvolver uma solução que permita monitorar e analisar o consumo de energia elétrica em tempo real no terceiro andar do prédio 4H do DAEE. 
 A aplicação é composta por uma interface web e um aplicativo Android, permitindo o acesso remoto aos dados.
 
 ### Tecnologias Utilizadas
