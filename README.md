@@ -1,5 +1,5 @@
 
-# Projeto de Medição de Consumo de Energia - Segundo Andar, Prédio 4H DAEE
+# Projeto de Medição de Consumo de Energia -  Prédio 4H DAEE
 
 Este repositório contém o projeto de medição de consumo de energia do segundo andar do prédio 4H do DAEE. O projeto é uma ferramenta de monitoramento que apresenta dados de consumo de energia em uma interface web e um aplicativo Android. 
 Ele foi desenvolvido como método avaliativo para a disciplina de Microprocessados.
