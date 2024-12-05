@@ -21,6 +21,71 @@ body {
     max-width: 400px;
   }
   
+  
+
+
+
+
+
+
+
+
+
+/* Estiliza o contêiner principal para layout flex */
+.main-container {
+  display: flex;
+  flex-direction: column; /* Coloca os filhos em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  gap: 2px; /* Espaço entre as linhas */
+}
+
+/* Linha para os contêineres das fases */
+.fases-container {
+  max-width: 600px;
+  display: flex; /* Organiza as fases em uma linha */
+  justify-content: center; /* Centraliza horizontalmente */
+  padding: 10px;/* Espaço entre os elementos */
+}
+
+
+/* Estiliza o contêiner do gráfico */
+.grafico-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%; /* Define largura relativa ao contêiner */
+  max-width: 800px; /* Limita a largura máxima */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   /* Estilo do título */
   .container h1 {
     font-size: 55px;
