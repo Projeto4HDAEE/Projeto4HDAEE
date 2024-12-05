@@ -116,9 +116,31 @@ const historicoChart = new Chart(ctx, {
     options: {
         responsive: true,
         scales: {
-            x: { title: { display: true, text: 'Tempo' } },
-            y: { title: { display: true, text: 'Consumo (VA)' } },
+            x: {
+                title: { display: true, text: 'Tempo' },
+            },
+            y: {
+                title: { display: true, text: 'Consumo (VA)' },
+            },
+        },
+        plugins: {
+            zoom: {
+                zoom: {
+                    wheel: {
+                        enabled: true, // Permite zoom com o scroll do mouse
+                    },
+                    pinch: {
+                        enabled: true, // Permite zoom com gestos de pinça (touch)
+                    },
+                    mode: 'xy', // Permite zoom nos eixos X e Y
+                },
+                pan: {
+                    enabled: true, // Permite deslocar o gráfico
+                    mode: 'xy', // Permite pan nos eixos X e Y
+                },
+            },
         },
     },
 });
+
 });

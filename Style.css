@@ -17,8 +17,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 900px;
   }
   
   
@@ -42,17 +42,18 @@ body {
 
 /* Linha para os contêineres das fases */
 .fases-container {
-  max-width: 600px;
+  max-width: 8000px;
   display: flex; /* Organiza as fases em uma linha */
   justify-content: center; /* Centraliza horizontalmente */
-  padding: 10px;/* Espaço entre os elementos */
+  padding: 10px;
+  gap:100px/* Espaço entre os elementos */
 }
 
 
 /* Estiliza o contêiner do gráfico */
 .grafico-container {
   background: #fff;
-  padding: 20px;
+  padding: 2px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -88,7 +89,7 @@ body {
   
   /* Estilo do título */
   .container h1 {
-    font-size: 55px;
+    font-size: 50px;
     color: #4e54c8;
     margin-bottom: 10px;
   }

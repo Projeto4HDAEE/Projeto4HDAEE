@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projeto Microprocessados PIC16f877A</title>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-compat.js"></script>
     <!-- Link para o arquivo CSS -->
     <link rel="stylesheet" href="Style.css" />
@@ -101,7 +103,7 @@
       <p id="mensagemC">Carregando dados...</p>
     </div>
   </div>
-    <div class="container">
+    <div class="container" id="grafico-container">
       <h2>Histórico de Consumo</h2>
       <canvas id="historicoConsumo"></canvas>
   </div></div>

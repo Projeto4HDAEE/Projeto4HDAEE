@@ -85,40 +85,62 @@ function buscarDadosFaseC() {
 
       buscarDadosFaseC();
       const ctx = document.getElementById('historicoConsumo').getContext('2d');
-const historicoChart = new Chart(ctx, {
-    type: 'line', // Tipo de gráfico
-    data: {
-        labels: [], // Adicione os rótulos (tempo, por exemplo)
-        datasets: [
-            {
-                label: 'Fase A',
-                data: [], // Dados para a Fase A
-                borderColor: 'rgba(255, 99, 132, 1)', // Cor da linha
-                backgroundColor: 'rgba(255, 99, 132, 0.2)', // Cor de fundo
-                borderWidth: 1,
-            },
-            {
-                label: 'Fase B',
-                data: [], // Dados para a Fase B
-                borderColor: 'rgba(54, 162, 235, 1)', // Cor da linha
-                backgroundColor: 'rgba(54, 162, 235, 0.2)', // Cor de fundo
-                borderWidth: 1,
-            },
-            {
-                label: 'Fase C',
-                data: [], // Dados para a Fase C
-                borderColor: 'rgba(75, 192, 192, 1)', // Cor da linha
-                backgroundColor: 'rgba(75, 192, 192, 0.2)', // Cor de fundo
-                borderWidth: 1,
-            }
-        ]
-    },
-    options: {
-        responsive: true,
-        scales: {
-            x: { title: { display: true, text: 'Tempo' } },
-            y: { title: { display: true, text: 'Consumo (VA)' } },
-        },
-    },
-});
+      const historicoChart = new Chart(ctx, {
+          type: 'line', // Tipo de gráfico
+          data: {
+              labels: [], // Adicione os rótulos (tempo, por exemplo)
+              datasets: [
+                  {
+                      label: 'Fase A',
+                      data: [], // Dados para a Fase A
+                      borderColor: 'rgba(255, 99, 132, 1)', // Cor da linha
+                      backgroundColor: 'rgba(255, 99, 132, 0.2)', // Cor de fundo
+                      borderWidth: 1,
+                  },
+                  {
+                      label: 'Fase B',
+                      data: [], // Dados para a Fase B
+                      borderColor: 'rgba(54, 162, 235, 1)', // Cor da linha
+                      backgroundColor: 'rgba(54, 162, 235, 0.2)', // Cor de fundo
+                      borderWidth: 1,
+                  },
+                  {
+                      label: 'Fase C',
+                      data: [], // Dados para a Fase C
+                      borderColor: 'rgba(75, 192, 192, 1)', // Cor da linha
+                      backgroundColor: 'rgba(75, 192, 192, 0.2)', // Cor de fundo
+                      borderWidth: 1,
+                  }
+              ]
+          },
+          options: {
+              responsive: true,
+              scales: {
+                  x: {
+                      title: { display: true, text: 'Tempo' },
+                  },
+                  y: {
+                      title: { display: true, text: 'Consumo (VA)' },
+                  },
+              },
+              plugins: {
+                  zoom: {
+                      zoom: {
+                          wheel: {
+                              enabled: true, // Permite zoom com o scroll do mouse
+                          },
+                          pinch: {
+                              enabled: true, // Permite zoom com gestos de pinça (touch)
+                          },
+                          mode: 'xy', // Permite zoom nos eixos X e Y
+                      },
+                      pan: {
+                          enabled: true, // Permite deslocar o gráfico
+                          mode: 'xy', // Permite pan nos eixos X e Y
+                      },
+                  },
+              },
+          },
+      });
+      
 });

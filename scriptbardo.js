@@ -2,13 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
       // Configurações do Firebase (substitua com suas próprias configurações)
       const firebaseConfig = {
         apiKey: "AIzaSyDRh_q0hG7U6xwpHcfX7BR8h3Y5KwYUT_g",
-    authDomain: "consumo4hdaee.firebaseapp.com",
-    databaseURL: "https://consumo4hdaee-default-rtdb.firebaseio.com",
-    projectId: "consumo4hdaee",
-    storageBucket: "consumo4hdaee.firebasestorage.app",
-    messagingSenderId: "109357079256",
-    appId: "1:109357079256:web:66ec2323ccc23a536695ad",
-    measurementId: "G-Y5J0M7VY51"
+        authDomain: "consumo4hdaee.firebaseapp.com",
+        databaseURL: "https://consumo4hdaee-default-rtdb.firebaseio.com",
+        projectId: "consumo4hdaee",
+        storageBucket: "consumo4hdaee.firebasestorage.app",
+        messagingSenderId: "109357079256",
+        appId: "1:109357079256:web:66ec2323ccc23a536695ad",
+        measurementId: "G-Y5J0M7VY51"
       };
 
       // Inicializa o Firebase
@@ -116,9 +116,31 @@ const historicoChart = new Chart(ctx, {
     options: {
         responsive: true,
         scales: {
-            x: { title: { display: true, text: 'Tempo' } },
-            y: { title: { display: true, text: 'Consumo (W)' } },
+            x: {
+                title: { display: true, text: 'Tempo' },
+            },
+            y: {
+                title: { display: true, text: 'Consumo (VA)' },
+            },
+        },
+        plugins: {
+            zoom: {
+                zoom: {
+                    wheel: {
+                        enabled: true, // Permite zoom com o scroll do mouse
+                    },
+                    pinch: {
+                        enabled: true, // Permite zoom com gestos de pinça (touch)
+                    },
+                    mode: 'xy', // Permite zoom nos eixos X e Y
+                },
+                pan: {
+                    enabled: true, // Permite deslocar o gráfico
+                    mode: 'xy', // Permite pan nos eixos X e Y
+                },
+            },
         },
     },
 });
+
 });
