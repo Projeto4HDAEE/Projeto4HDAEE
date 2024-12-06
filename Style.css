@@ -233,7 +233,7 @@ body {
   
   /* Estilos responsivos para smartphones */
   /* Estilos responsivos para smartphones */
-@media (max-width: 601px) {
+@media (max-width: 600px) {
 
  
     .navbar {
@@ -260,7 +260,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
- 
+  width: 400px;
   height: 270px;
 }
 
@@ -270,7 +270,7 @@ body {
   }
   #historicoConsumo{
     width: 90%; /* Largura visual, relativa ao contêiner */
-    height: 400px; /* Altura visual */
+    height: 300px; /* Altura visual */
    
   }
 
