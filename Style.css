@@ -112,31 +112,64 @@ body {
   }
   
   /* Estilos responsivos para smartphones */
-  @media (max-width: 600px) {
-    body {
+  /* Estilos responsivos para smartphones */
+@media (max-width: 600px) {
+  body {
       padding: 0;
-      font-size: 40px;
-    }
-  
-    .container {
-      padding: 5px;
-      width: 30%;
-      
-    }
-  
-    .container h1 {
-      font-size: 15px;
-    }
-  
-    .container p {
-      font-size: 30px;
-    }
-  
-    footer {
-      font-size: 15px;
-      padding-bottom: 10px;
-    }
+      font-size: 14px; /* Reduz tamanho da fonte para telas menores */
+      flex-direction: column; /* Alinha o layout em coluna */
+      height: auto; /* Remove limite de altura para evitar overflow */
   }
+
+  .container {
+      padding: 10px; /* Ajusta o espaçamento interno */
+      width: 90%; /* Usa quase toda a largura da tela */
+  }
+
+  .container h1 {
+      font-size: 20px; /* Diminui o tamanho do título */
+  }
+
+  .container p {
+      font-size: 16px; /* Diminui tamanho da mensagem */
+  }
+
+  .fases-container {
+      flex-wrap: wrap; /* Permite que os elementos quebrem em novas linhas */
+      gap: 10px; /* Reduz o espaço entre elementos */
+  }
+
+  .fases-container .fase {
+      width: 100%; /* Cada fase ocupa toda a largura */
+      max-width: none; /* Remove limite máximo de largura */
+      padding: 15px; /* Ajusta o espaçamento interno */
+  }
+
+  .grafico-container {
+      padding: 10px;
+      width: 100%; /* Usa toda a largura da tela */
+  }
+
+  footer {
+      font-size: 12px; /* Reduz o tamanho da fonte do rodapé */
+      padding-bottom: 15px;
+  }
+
+  .navbar a {
+      font-size: 14px; /* Reduz o tamanho das opções do menu */
+  }
+
+  .sidebar ul li a {
+      font-size: 14px; /* Ajusta o tamanho das opções do menu lateral */
+  }
+
+  #abrir-btn {
+      font-size: 18px; /* Ajusta tamanho do botão */
+      padding: 8px; /* Reduz o espaçamento interno */
+      margin: 10px;
+  }
+}
+
 
 /* Navbar Horizontal */
 .navbar {
