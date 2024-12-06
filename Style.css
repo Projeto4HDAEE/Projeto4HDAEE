@@ -103,7 +103,7 @@ body {
 /* Botão de abrir a barra lateral */
 
   /* Estilo da barra lateral */
-  .sidebar {
+  .sidebar {z-index: 0;
     height: 100%;
     width: 250px;
     position: absolute;
@@ -114,10 +114,10 @@ body {
     transition: 0.3s; /* Animação suave para abrir e fechar */
     padding-top: 20px;
     overflow-y: auto;
-    z-index: 1;
+  
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
   }
-  .sidebar h3{
+  .sidebar h3{z-index: 0;
     
     padding-left: 15px;
 
@@ -137,7 +137,7 @@ body {
     border-radius: 5px;
     z-index: 0;
   }
-  .imagem{
+  .imagem{z-index: 0;
     position: absolute;
     bottom: 10px;
     font-size: 12px;
@@ -151,7 +151,7 @@ body {
   }
 
   /* Botão de fechar dentro da barra */
-  .fechar-btn {
+  .fechar-btn {z-index: 0;
     font-size: 30px;
     margin-top: 14%;
     color: white;
@@ -162,16 +162,16 @@ body {
   }
   
   /* Estilo dos links de navegação */
-  .sidebar ul {
+  .sidebar ul {z-index: 0;
     list-style-type: none;
     padding: 0;
   }
   
-  .sidebar ul li {
+  .sidebar ul li {z-index: 0;
     margin: 20px 0;
   }
   
-  .sidebar ul li a {
+  .sidebar ul li a {z-index: 0;
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -180,7 +180,7 @@ body {
     transition: background 0.3s;
   }
   
-  .sidebar ul li a:hover {
+  .sidebar ul li a:hover {z-index: 0;
     background-color: #4e54c8;
   }
   
