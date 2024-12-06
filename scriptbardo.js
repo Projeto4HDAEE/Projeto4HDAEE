@@ -67,8 +67,20 @@ function buscarDadosFaseC() {
       ? valorFormatado + "VA"
       : "Sem dados disponíveis";
       
-  });
+  }); 
+ 
 }
+function consumo() {
+    
+      const data = buscarDadosFaseA()+buscarDadosFaseB()+buscarDadosFaseC();
+      const valorFormatado = typeof data === "number" ? data.toFixed(2) : data;
+  
+      document.getElementById("mensagem").innerText = valorFormatado
+        ? valorFormatado + "VA"
+        : "Sem dados disponíveis";
+        
+}
+  
 
       function abrirMenu() {
         document.getElementById("sidebar").style.left = "0";
@@ -80,7 +92,7 @@ function buscarDadosFaseC() {
       }
       // Chama a função buscarDados
       buscarDadosFaseA();
- 
+      
       buscarDadosFaseB();
 
       buscarDadosFaseC();
