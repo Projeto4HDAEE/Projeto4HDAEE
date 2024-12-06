@@ -237,7 +237,7 @@ body {
 
  
     .navbar {
-      display: none; /* Exibe a navbar para telas maiores */
+      display: flex; /* Exibe a navbar para telas maiores */
     }
   
   body {margin-left: 10px;
@@ -305,6 +305,7 @@ body {
   }
 
   #abrir-btn {
+    display: none;
       font-size: 18px; /* Ajusta tamanho do botão */
       padding: 8px; /* Reduz o espaçamento interno */
       margin: 100px;
