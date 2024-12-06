@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const database = firebase.database();
 
       function buscarDadosFaseA() {
-  const ref = database.ref("/Padilha/Medidas/CorrenteA");
+  const ref = database.ref("/BARDO/Medidas/CorrenteA");
   ref.on("value", (snapshot) => {
     const data = (snapshot.val()*127);
     console.log("Dados Fase W:", data); // Log para verificar os dados
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 function buscarDadosFaseB() {
-  const ref = database.ref("/Padilha/Medidas/CorrenteB");
+  const ref = database.ref("/BARDO/Medidas/CorrenteB");
   ref.on("value", (snapshot) => {
     const data = snapshot.val()*127;
     console.log("Dados Fase B:", data); // Log para verificar os dados
@@ -52,7 +52,7 @@ function buscarDadosFaseB() {
 }
 
 function buscarDadosFaseC() {
-  const ref = database.ref("/Padilha/Medidas/CorrenteC");
+  const ref = database.ref("/BARDO/Medidas/CorrenteC");
   ref.on("value", (snapshot) => {
     const data = snapshot.val()*127;
     console.log("Dados Fase C:", data); // Log para verificar os dados
