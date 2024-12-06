@@ -41,6 +41,8 @@ body {
 
 
 
+
+
 /* Estiliza o contêiner principal para layout flex */
 .main-container {
   display: flex;
@@ -94,8 +96,6 @@ body {
 
 
 
-
-
   
   /* Estilo do título */
   .container h1 {
@@ -123,10 +123,13 @@ body {
   
   /* Estilos responsivos para smartphones */
   /* Estilos responsivos para smartphones */
-@media (max-width: 600px) {
-  .navbar {
-    display: flex; /* Exibe a navbar para telas maiores */
-  }
+@media (max-width: 601px) {
+
+ 
+    .navbar {
+      display: none; /* Exibe a navbar para telas maiores */
+    }
+  
   body {margin-left: 10px;
 
       padding: 40px;
@@ -187,10 +190,6 @@ body {
       padding-bottom: 15px;
   }
 
-  .navbar a {
-      font-size: 14px; /* Reduz o tamanho das opções do menu */
-  }
-
   .sidebar ul li a {
       font-size: 14px; /* Ajusta o tamanho das opções do menu lateral */
   }
@@ -198,14 +197,21 @@ body {
   #abrir-btn {
       font-size: 18px; /* Ajusta tamanho do botão */
       padding: 8px; /* Reduz o espaçamento interno */
-      margin: 10px;
+      margin: 100px;
+  }
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 5px;
+    transition: background 0.3s;
   }
 }
 
 
 /* Navbar Horizontal */
 .navbar {
-  display: none;
+  display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #333;
