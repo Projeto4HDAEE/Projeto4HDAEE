@@ -142,10 +142,5 @@ const historicoChart = new Chart(ctx, {
         },
     },
 });
-const canvas = document.getElementById('historicoConsumo');
 
-
-// Ajusta os atributos internos do canvas
-canvas.width = canvas.offsetWidth; // Tamanho interno igual ao tamanho CSS
-canvas.height = 300; // Altura definida em p
 });
