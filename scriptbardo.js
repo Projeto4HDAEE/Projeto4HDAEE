@@ -54,7 +54,7 @@ function buscarDadosFaseB() {
 function buscarDadosFaseC() {
   const ref = database.ref("/BARDO/Medidas/CorrenteC");
   ref.on("value", (snapshot) => {
-    const data = snapshot.val()*127;
+    const data = (snapshot.val()*127);
     console.log("Dados Fase C:", data); // Log para verificar os dados
     const valorFormatado = typeof data === "number" ? data.toFixed(2) : data;
 
