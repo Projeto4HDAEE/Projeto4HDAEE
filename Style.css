@@ -20,6 +20,16 @@ body {
     width: 100%;
     max-width: 900px;
   }
+  .container2 {
+    background-color: #ffffff;
+    padding: 1px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+   
+    height: 400px;
+
+  }
   
   
 
@@ -114,20 +124,39 @@ body {
   /* Estilos responsivos para smartphones */
   /* Estilos responsivos para smartphones */
 @media (max-width: 600px) {
+  .navbar {
+    display: flex; /* Exibe a navbar para telas maiores */
+  }
   body {
-      padding: 0;
+      padding: 40px;
       font-size: 14px; /* Reduz tamanho da fonte para telas menores */
       flex-direction: column; /* Alinha o layout em coluna */
       height: auto; /* Remove limite de altura para evitar overflow */
   }
 
   .container {
-      padding: 10px; /* Ajusta o espaçamento interno */
-      width: 90%; /* Usa quase toda a largura da tela */
-  }
+    margin-top: 0px;
+    padding: 25px; /* Ajusta o espaçamento interno */
+    width: 90%; /* Usa quase toda a largura da tela */
+}
+.container2 {
+  background-color: #ffffff;
+  padding: 1px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+ 
+  height: 300px;
+}
 
   .container h1 {
-      font-size: 20px; /* Diminui o tamanho do título */
+      font-size: 20px;
+       /* Diminui o tamanho do título */
+  }
+  #historicoConsumo{
+    width: 90%; /* Largura visual, relativa ao contêiner */
+    height: 400px; /* Altura visual */
+   
   }
 
   .container p {
@@ -145,9 +174,10 @@ body {
       padding: 15px; /* Ajusta o espaçamento interno */
   }
 
-  .grafico-container {
+  #s {
       padding: 10px;
-      width: 100%; /* Usa toda a largura da tela */
+      width: 90%;
+      height: 370px; /* Usa toda a largura da tela */
   }
 
   footer {
@@ -198,11 +228,7 @@ body {
   border-radius: 4px;
 }
 /* Botão de abrir a barra lateral */
-@media (min-width: 601px) {
-  .navbar {
-    display: flex; /* Exibe a navbar para telas maiores */
-  }
-}
+
   /* Estilo da barra lateral */
   .sidebar {
     height: 100%;
