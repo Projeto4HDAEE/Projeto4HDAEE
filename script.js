@@ -107,7 +107,7 @@ let amostrasC = [];
     function buscarDados(fase, elementoId, datasetIndex) {
         const ref = database.ref(`${basePath}Corrente${fase}`);
         ref.on("value", (snapshot) => {
-            const data = (snapshot.val() * 127)/3.728;
+            const data = (snapshot.val() * 127)/3.78;
             console.log(`Dados Fase ${fase}:`, data);
 
             if (fase === "A") faseA = data;
