@@ -19,7 +19,7 @@ const firestore = firebase.firestore();
 // Obtém o caminho base do Firebase a partir dos parâmetros da URL
 const urlParams = new URLSearchParams(window.location.search);
 const basePath = urlParams.get("path");
-carregarCalendarioFirestore("Roque");
+carregarCalendarioFirestore("default_user");
 
 // Função para buscar dados do Firestore e exibir em um calendário com opção de clicar para visualizar dados do dia
 function carregarCalendarioFirestore(usuario) {
