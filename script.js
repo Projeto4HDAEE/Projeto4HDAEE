@@ -110,7 +110,7 @@ let amostrasC = [];
             const data = (snapshot.val() * 127);
             console.log(`Dados Fase ${fase}:`, data);
 
-            if (fase === "A") faseA = data/3.78;
+            if (fase === "A") faseA = data;
             if (fase === "B") faseB = data;
             if (fase === "C") faseC = data;
             atualizarConsumoTotal();
