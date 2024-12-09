@@ -11,21 +11,26 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <button id="abrir-btn" onclick="abrirMenu()">☰ Menu</button>
-    <div id="navbar" class="navbars">
-      <button class="fechar-btn" onclick="fecharMenu()">×</button>
-      <h3>Menu</h3>
-      <ul>
+    <button class="toggle-btn" id="toggle-btn" onclick="toggleSidebar()">
+      ☰ Menu
+    </button>
+    <div class="sidebar">
+      <ul id="menu">
         <li>
-          <a href="?path=/Padilha/Medidas/" id="padilha" target="_self"
-            >Roque</a
+          <a href="?path=/Padilha/Medidas/" target="_self">Roque</a>
+        </li>
+        <li>
+          <a href="?path=/BARDO/Medidas/" target="_self">Bardo</a>
+        </li>
+        <li>
+          <a href="?path=/VITOR/Medidas/" target="_self">Vitor</a>
+        </li>
+        <li>
+          <a
+            href="Timeline.html?usuario=Roque&path=/Padilha/Medidas/"
+            target="_self"
+            >Calendário</a
           >
-        </li>
-        <li>
-          <a href="?path=/BARDO/Medidas/" id="bardo" target="_self">Bardo</a>
-        </li>
-        <li>
-          <a href="?path=/VITOR/Medidas/" id="vitor" target="_self">Vitor</a>
         </li>
         <li>
           <a href="index.html" target="_self">Sinotico </a>

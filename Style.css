@@ -30,6 +30,7 @@ body {
     text-align: center;
     width: 100%;
     max-width: 900px;
+    transition: all 1s ease-in-out; /* Transição suave */
   }
   .container1 {
     background-color: #ffffff;
@@ -38,7 +39,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 100%;
-   
+    transition: all 1s ease-in-out; /* Transição suave */
     max-width: 360px;
   }
   .container2 {
@@ -49,9 +50,13 @@ body {
     text-align: center;
     width: 90%;
     height: 500px;
-
+    transition: all 1s ease-in-out; /* Transição suave */
   }
-  
+  .container.animate, .container1.animate, .container2.animate {
+ /* Transforma em bola */
+    transform: scale(0.7) translateY(20px); /* Diminui e move */
+    opacity: 0; /* Desaparece ao fim da animação */
+}
   
 
 
@@ -93,71 +98,6 @@ body {
   width: 90%; /* Define largura relativa ao contêiner */
   max-width: 800px; /* Limita a largura máxima */
 }
-
-
-/* Navbar Horizontal */
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #333;
-  padding: 5px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 2; /* Para aparecer acima da sidebar */
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  font-size: 18px;
-  transition: background 0.3s;
-}
-
-.navbar a:hover {
-  background-color: #4e54c8;
-  border-radius: 4px;
-}
-/* Botão de abrir a barra lateral */
-
-  /* Estilo da barra lateral */
-  .sidebar {z-index: 0;
-    height: 100%;
-    width: 250px;
-    position: absolute;
-    top: 0;
-    left: -250px; /* Oculta a barra fora da tela */
-    background-color: #333;
-    color: white;
-    transition: 0.3s; /* Animação suave para abrir e fechar */
-    padding-top: 20px;
-    overflow-y: auto;
-  
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  }
-  .sidebar h3{z-index: 0;
-    
-    padding-left: 15px;
-
-  }
-  #abrir-btn {
-    display: none;
-    font-size: 20px;
-    padding: 10px;
-    margin: 5px;
-    position: absolute;
-    cursor:auto;
-    margin-right: 80%;
-  margin-bottom: 180%;
-    background-color: transparent;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    z-index: 0;
-  }
   .imagem{z-index: 0;
     position: absolute;
     bottom: 10px;
@@ -171,40 +111,7 @@ body {
     box-sizing: border-box; /* Mantém a proporção da imagem */
   }
 
-  /* Botão de fechar dentro da barra */
-  .fechar-btn {z-index: 0;
-    font-size: 30px;
-    margin-top: 14%;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 24px;
-  }
-  
-  /* Estilo dos links de navegação */
-  .sidebar ul {z-index: 0;
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {z-index: 0;
-    margin: 20px 0;
-  }
-  
-  .sidebar ul li a {z-index: 0;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-    padding: 8px 20px;
-    transition: background 0.3s;
-  }
-  
-  .sidebar ul li a:hover {z-index: 0;
-    background-color: #4e54c8;
-  }
-  
+
 
 
 
@@ -232,19 +139,19 @@ body {
   /* Estilo do título */
   .container h1 {
     font-size: 35px;
-    color: #4e54c8;
+    color:#533c88;
     margin-bottom: 10px;
   }
   
   /* Estilo da mensagem */
   .container p {
     font-size: 30px;
-    color: #555;
+    color: #686868;
     margin-top: 10px;
   } 
   .container1 h1 {
     font-size: 35px;
-    color: #4e54c8;
+    color:#533c88;
     margin-bottom: 10px;
   }
   
@@ -270,9 +177,7 @@ body {
 @media (max-width: 600px) {
 
  
-    .navbar {
-      display: flex; /* Exibe a navbar para telas maiores */
-    }
+
   
   body {margin-left: 10px;
 
@@ -334,22 +239,81 @@ body {
       padding-bottom: 15px;
   }
 
-  .sidebar ul li a {
-      font-size: 14px; /* Ajusta o tamanho das opções do menu lateral */
-  }
 
-  #abrir-btn {
-    display: none;
-      font-size: 18px; /* Ajusta tamanho do botão */
-      padding: 8px; /* Reduz o espaçamento interno */
-      margin: 100px;
-  }
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 10px;
-    font-size: 15px;
-    transition: background 0.3s;
-  }
+
+ 
 }
 
+/* Estilo para a barra lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  overflow-x: hidden;
+  transition: transform 0.3s ease; /* Transição suave ao abrir/fechar */
+  transform: translateX(-100%); /* Começa colapsada */
+}
+
+/* Menu expandido */
+.sidebar.open {
+  transform: translateX(0); /* Exibe a barra */
+}
+
+/* Estilo para o botão de toggle */
+.toggle-btn {
+  position: absolute;
+  top: 5px;
+  left: 40px;
+  background-color: #333;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Estilo para a lista do menu */
+#menu { 
+ 
+  top: 100px;
+  list-style-type: none;
+  margin: 80px 20px 0 20px; /* Adiciona espaçamento nas laterais */
+}
+
+#menu li { 
+  margin-top: 80px;
+  margin: 50px 0; /* Espaçamento vertical entre os itens */
+  display: flex; /* Para alinhar ícones e texto */
+  align-items: center;
+}
+
+#menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px; /* Aumenta a fonte */
+  padding: 12px 15px;
+  display: flex; /* Alinha ícones com texto */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  border-radius: 8px; /* Arredonda os cantos */
+  transition: all 0.3s ease-in-out; /* Suaviza a transição */
+}
+
+#menu li a:hover {
+  background-color: rgb(255, 255, 255); /* Fundo translúcido no hover */
+  transform: scale(1.05); /* Aumenta levemente no hover */
+}
+
+#menu li a i {
+  font-size: 24px; /* Tamanho dos ícones */
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+  color: #ffcc00; /* Cor do ícone */
+}
+
+#menu li a span {
+  flex: 1; /* Faz o texto ocupar o espaço restante */
+}
