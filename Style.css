@@ -1,24 +1,45 @@
 /* Estilos para o corpo da página */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #4e54c8, #8f94fb);
-    color: #333;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  transition: all 500ms ease-out; /* Transição suave */
+}
+
+.container:hover {
+  transform: scale(1.05); /* Aumenta levemente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+}
+.container1:hover {
+  transform: scale(1.05); /* Aumenta levemente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+}
+
   /* Estilo para o container */
-  .container {
+  .container {  /* Indica que o elemento é clicável */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #ffffff;
+    padding: 20px;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+  }
+  .container1 {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 100%;
-    max-width: 900px;
+   
+    max-width: 360px;
   }
   .container2 {
     background-color: #ffffff;
@@ -217,7 +238,19 @@ body {
   
   /* Estilo da mensagem */
   .container p {
-    font-size: 40px;
+    font-size: 30px;
+    color: #555;
+    margin-top: 10px;
+  } 
+  .container1 h1 {
+    font-size: 35px;
+    color: #4e54c8;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo da mensagem */
+  .container1 p {
+    font-size: 30px;
     color: #555;
     margin-top: 10px;
   }

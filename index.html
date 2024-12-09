@@ -8,6 +8,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-compat.js"></script>
     <!-- Link para o arquivo CSS -->
     <link rel="stylesheet" href="Style.css" />
+    <script src="script.js"></script>
  
     <!-- Script Firebase framework -->
    
@@ -48,20 +49,16 @@
     <div class="main-container">
       <div class="fases-container">
         <!-- barra horizontal de navegação desktop -->
-        <a href="Roque.html">
-    <div class="container">
-      <h1>Laboratorio</h1>
-      <p id="mensagemA">Roque</p>
-    </div></a>
-    <a href="Bardo.html">
-    <div class="container">
-      <h1>Laboratorio</h1>
-      <p id="mensagemB">Bardo</p>
-    </div></a> <a href="Vitor.html">
-    <div class="container">
-      <h1>Laboratorio</h1>
-      <p id="mensagemC">Vitor</p>
-    </div></a>
+        <div class="container" onclick="navigateTo('Scada4h.html?path=/Padilha/Medidas/', 'linear-gradient(135deg, #FF5733, #FFC300)')">
+          <h1>Laboratório Roque</h1>
+      </div>
+      <div class="container" onclick="navigateTo('Scada4h.html?path=/BARDO/Medidas/', 'linear-gradient(135deg, #33FF57, #33FFF5)')">
+          <h1>Laboratório Bardo</h1>
+      </div>
+      <div class="container" onclick="navigateTo('Scada4h.html?path=/VITOR/Medidas/', 'linear-gradient(135deg, #5733FF, #FF33A2)')">
+          <h1>Laboratório Vitor</h1>
+      </div>
+      
   </div>
     </div>
  
